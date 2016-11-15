@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<style>
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+</style>
+<head>
+ <script src="customer.js"></script>
+</head>
+<body>
+
+<h1>List the customers</h1>
+
+
+<table id="CustomerTable"></table>
+
+<script>
+
+function CustomersToTable() {
+  
+  var table="<tr><th>Name</th><th>Address</th><th>Town</th><th>Zip</th><th>Phone</th><th>Email</th><th>Bool</th>";
+
+  for (i = 0; i <customers.length; i++) { 
+    table += "<tr><td>" +
+    customers[i].name +
+    "</td><td>" +
+    customers[i].address +
+    "</td><td>" +
+    customers[i].city +
+    "</td><td>" +
+    customers[i].zipcode +
+    "</td><td>" +
+    customers[i].phone +
+    "</td><td>" +
+    customers[i].email +
+    "</td><td>" +
+    customers[i].contact +
+    "</td></tr>";
+
+  }
+
+  document.getElementById("CustomerTable").innerHTML = table;
+}
+CustomersToTable();
+</script>
+
+<br><br>
+
+</body>
+</html>
