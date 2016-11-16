@@ -59,3 +59,30 @@ CustomersfromLines(data);
 // See if it worked
 alert("List has " + customers.length + " customers");
 //listCustomers();
+
+
+function CustomersToTable() {
+  
+  var table="<tr><th>Name</th><th>Address</th><th>Town</th><th>Zip</th><th>Phone</th><th>Email</th><th>Bool</th>";
+
+  for (i = 0; i <customers.length; i++) { 
+    table += "<tr><td>" +
+    customers[i].name +
+    "</td><td>" +
+    customers[i].address +
+    "</td><td>" +
+    customers[i].city +
+    "</td><td>" +
+    customers[i].zipcode +
+    "</td><td>" +
+    customers[i].phone +
+    "</td><td>" +
+    customers[i].email +
+    "</td><td>" +
+    customers[i].contact +
+    "</td></tr>";
+
+  }
+
+  document.getElementById("CustomerTable").innerHTML = table;
+}

@@ -28,32 +28,25 @@ function loadDoc() {
   xhttp.open("GET", "street address.xml", true);
   xhttp.send();
 }
-function myFunction(xml) {
+function myFunction(xml, CustomerList) {
   var CL = new Array();
   var i;
   var xmlDoc = xml.responseXML;
   var table="<tr><th>Artist</th><th>Title</th></tr>";
   var x = xmlDoc.getElementsByTagName("CustomerID");
   for (i = 0; i <x.length; i++) { 
-    var row = "<tr><td>" +
-    x[i].getElementsByTagName("Name")[0].childNodes[0].nodeValue +
-    "</td><td>" +
-    x[i].getElementsByTagName("Address")[0].childNodes[0].nodeValue +
-    "</td><td>" +
-    x[i].getElementsByTagName("Town")[0].childNodes[0].nodeValue +
-    "</td><td>" +
-    x[i].getElementsByTagName("Zip")[0].childNodes[0].nodeValue +
-    "</td><td>" +
-    x[i].getElementsByTagName("Phone")[0].childNodes[0].nodeValue +
-    "</td><td>" +
-    x[i].getElementsByTagName("Email")[0].childNodes[0].nodeValue +
-    "</td><td>" +
-    x[i].getElementsByTagName("Bool")[0].childNodes[0].nodeValue +
-    "</td></tr>";
-    table += row;
-    CL[i]=row;
+    var row = new Array();
+    row[0]= x[i].getElementsByTagName("Name")[0].childNodes[0].nodeValue;
+    row[1]= x[i].getElementsByTagName("Address")[0].childNodes[0].nodeValue;
+    row[2]= x[i].getElementsByTagName("Town")[0].childNodes[0].nodeValue;
+    row[3]= x[i].getElementsByTagName("Zip")[0].childNodes[0].nodeValue;
+    row[4]= x[i].getElementsByTagName("Phone")[0].childNodes[0].nodeValue;
+    row[5]= x[i].getElementsByTagName("Email")[0].childNodes[0].nodeValue;
+    row[6]= x[i].getElementsByTagName("Bool")[0].childNodes[0].nodeValue;
+    CL[i]=makeCustomer(row);
   }
   document.getElementById("demo").innerHTML = table;
+//  TODO make something to add it to the rest of the data
 }
 </script>
 
