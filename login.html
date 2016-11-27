@@ -1,49 +1,48 @@
 <!doctype html>
 <html>
 <head>
-<title>Login</title>
-
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body background="http://fc04.deviantart.net/images3/i/2004/086/b/1/The_Gradient.jpg">
+<body>
 	<div style="text-align:center;">
+		<h1>Login</h1>
+		<ul id = "banner"><a class='button' href="login.html">Login</a>||<a class='button' href="your_route.html">See your route</a>||<a class='button' href="enter_route.html">Add Customers</a>||<a class='button' href="map.html">Map Page</a></ul>
+		<br>
+		<a class='button' href="register.html">Register Here</a>
 
-<div class="content">
-	<h2>Login</h2>
-	<a href="login.html">Login</a>||<a href="your_route.html">See your route</a>||<a href="enter_route.html">Add Customers</a>||<a href="map.html">Map Page</a>
-		
-		<!-- <div id="error" class="error">
-            One or more errors occurred with your login attempt.
-            <ul>
-                <li>You did not enter a username.</li>
-                <li>You did not enter a password.</li>
-            </ul>
-        </div> -->
-		
-		
+		<div id="error" class="error">
+			One or more errors occurred with your login attempt.
+			<ul>
+				<li>You did not enter a username.</li>
+				<li>You did not enter a password.</li>
+			</ul>
+		</div> 
+
+
 		<form action="login.html" method="POST" id="login">
 			<table class="maxW"><tr>
-                <td class="alR shrink"></td>
-                <td class="stretch">Please enter your email and password to log in.</td>
-            </tr><tr>
-				<td class="alR shrink bold">Email:</td>
-				<td class="stretch right11"><input type="text" class="fillW" name="email" id="email"></td>
+				<td class="alR shrink"></td>
+				<td class="stretch">Please enter your email and password to log in.</td>
 			</tr><tr>
-				<td class="alR shrink bold">Password:</td>
-				<td class="stretch right11"><input type="password" class="fillW" name="password" id="pass"></td>
-			</tr><tr>
-				<td class="shrink"></td>
-				
-				<td class="stretch">
-					<table class="fillW fixed" cellspacing=10>
-						<tr>
-						<td><button class="button" href="javascript:{}" onClick="submitLogin()">Submit</a></td>
-						<td><button class="button" href="home">Cancel</a></td>
-						</tr>
-					</table>
-				</td>
-			</tr></table>
-		</form>
+			<td class="alR shrink bold">Email:</td>
+			<td class="stretch right11"><input type="text" class="fillW" name="email" id="email"></td>
+		</tr><tr>
+		<td class="alR shrink bold">Password:</td>
+		<td class="stretch right11"><input type="password" class="fillW" name="password" id="pass"></td>
+	</tr><tr>
+	<td class="shrink"></td>
+
+	<td class="stretch">
+		<table class="fillW fixed" cellspacing=10>
+			<tr>
+				<td><a class="button" href="javascript:{}" onClick="submitLogin()">Submit</a></td>
+				<td><a class="button" href="main.html">Cancel</a></td>
+			</tr>
+		</table>
+	</td>
+</tr></table>
+</form>
 </div>
-	</div>
 </body>
 </html>

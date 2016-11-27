@@ -13,7 +13,7 @@ function GiveMeTheWorks() {
   customers.push(customer2);
   // See if the push worked.
   alert("List has " + customers.length + " customers");
-  //listCustomers();
+  //listCustomers(customers);
   // Test data of an array of arrays
   var data = [
   ["Angelo Michelangelo", "116 Hamilton Street", "Rochester", "14620", "585-555-1212", 0, 1],
@@ -41,11 +41,16 @@ function GiveMeTheWorks() {
   ["Reggie Correggio","459 Heathland Circle","Webster","14580","585-555-1212",0,0],
   ["Ben Gozzoli","520 Robindale Drive","Webster","14580","585-555-1212",0,1]
   ];
-  CustomersfromLines(data);
+  CustomersfromLines(data, customers);
 
   // See if it worked
   alert("List has " + customers.length + " customers");
   //listCustomers();
+    localStorage['customers'] = customers;
+    var lstest = localStorage['customers'];
+    alert("List has " + lstest.length + " customers");
+  CustomersToTable(customers);
+
 }
 // Create a customer object
 function customer(name, address, city, zipcode, phone, email, contact) {
@@ -63,7 +68,7 @@ function customer(name, address, city, zipcode, phone, email, contact) {
 }
 
 // Step through the list of customers and display info on each.
-function listCustomers() {
+function listCustomers(customers) {
   for (i = 0; i < customers.length; i++) {
     customers[i].getaddress();
   }
@@ -76,7 +81,7 @@ function makeCustomer(arr) {
 }
 
 // From an array of arrays of properties, create a customer and put them on the list customers
-function CustomersfromLines(lines) {
+function CustomersfromLines(lines, customers) {
   for (var i = 0; i < lines.length; i++) {
     var cust = makeCustomer(lines[i]);
     customers.push(cust);
@@ -84,8 +89,7 @@ function CustomersfromLines(lines) {
 }
 
 
-function CustomersToTable() {
-  
+function CustomersToTable(customers) {
   var table="<tr><th>Name</th><th>Address</th><th>Town</th><th>Zip</th><th>Phone</th><th>Email</th><th>Bool</th>";
 
   for (i = 0; i <customers.length; i++) { 
@@ -110,8 +114,10 @@ function CustomersToTable() {
   document.getElementById("CustomerTable").innerHTML = table;
 }
 function Verify() {
+  customers = localStorage['customers'];
 //  var input = document.getElementsByTagName("form");
   var c = customer(document.getElementById("name"), document.getElementById("address"), document.getElementById("city"), document.getElementById("zipcode"), document.getElementById("phone"), document.getElementById("email"), document.getElementById("bool"));
   customers.push(c);
+  localStorage['customers'] = customers;
   alert("I did a thing!");
 }

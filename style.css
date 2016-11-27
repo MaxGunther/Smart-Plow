@@ -261,4 +261,10 @@ hr{
 input{
     color:black !important;
 }
+
+#map {
+        height: 400px;
+        width: 100%;
+       }
+
 /*.deferred{display:none;}*/

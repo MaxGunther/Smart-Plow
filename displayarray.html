@@ -11,43 +11,8 @@
 
 
 <table id="CustomerTable"></table>
-<button onclick="loadDoc()">Click Me</button>
+<button onclick="GiveMeTheWorks()">Click Me</button>
 <table id="CustomerTable2"></table>
-<script>
-CustomersToTable();
-//Hey future me, this next section of code reads in an XML and makes customer stuff out of it
-function loadDoc() {
-  var xhttp = new XMLHttpRequest();
-//  xhttp.onload = reqListener;
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      myFunction(this);
-    }
-  };
-  xhttp.open("GET", "street_address.xml", true);
-  xhttp.send();
-}
-function myFunction(xml) {
-  var CL = new Array();
-  var i;
-  var xmlDoc = xml.responseXML;
-  var table="<tr><th>Name</th><th>Address</th><th>Town</th><th>Zip</th><th>Phone</th><th>Email</th><th>Bool</th>";
-  var x = xmlDoc.getElementsByTagName("Row");
-  for (i = 1; i <x.length; i++) { 
-    var row = new Array();
-    row[0]= x[i].childNodes[0].childNodes[0].nodeValue;
-    row[1]= x[i].childNodes[1].childNodes[0].nodeValue;
-    row[2]= x[i].childNodes[2].childNodes[0].nodeValue;
-    row[3]= x[i].childNodes[3].childNodes[0].nodeValue;
-    row[4]= x[i].childNodes[4].childNodes[0].nodeValue;
-    row[5]= x[i].childNodes[5].childNodes[0].nodeValue;
-    row[6]= x[i].childNodes[6].childNodes[0].nodeValue;
-    CL[i]=makeCustomer(row);
-  }
-  document.getElementById("CustomerTable2").innerHTML = table;
-//  TODO make something to add it to the rest of the data
-}
-</script>
 <br><br>
 
 </body>
