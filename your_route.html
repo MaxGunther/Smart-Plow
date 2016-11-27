@@ -1,28 +1,18 @@
 <!DOCTYPE html>
 <html>
-<header><title>Your Route</title></header>
-<body background="http://fc04.deviantart.net/images3/i/2004/086/b/1/The_Gradient.jpg">
+<head>
+	<title>Your Route</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="loadlist.js"></script>
+</head>
+<body>
 	<div style="text-align:center;">
 		<h1>Your Route</h1>
+		<a href="login.html">Login</a>||<a href="your_route.html">See your route</a>||<a href="enter_route.html">Add Customers</a>||<a href="map.html">Map Page</a>
 <ul>
-	<TABLE BORDER="2" CELLSPACING="1" CELLPADDING="1">
-		<TR>
-		<TD ALIGN = "center"> Customer Name </TD>
-		<TD ALIGN = "center"> Street Address </TD>
-		<TD ALIGN = "center"> Phone Number </TD>
-		<TD ALIGN = "center"> Email </TD>
-		</TR>
-
-<TR>
-<TD ALIGN = "center"> John Smith </TD>
-<TD ALIGN = "center"> 400 Pennsylvania Ave </TD>
-<TD ALIGN = "center"> 01189998819991197253 </TD>
-<TD ALIGN = "center"> name@aol.com </TD>
-</TR>
-
-</TABLE>
+	<button onclick="loadDoc()">Click Me</button>
+	<TABLE id="route_table"BORDER="2" CELLSPACING="1" CELLPADDING="1"></TABLE>
 </ul>
-
 	</div>
 </body>
 </html>

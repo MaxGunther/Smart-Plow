@@ -1,0 +1,264 @@
+*{font-family:"Times New Roman", serif;}
+body{background-image:url("http://fc04.deviantart.net/images3/i/2004/086/b/1/The_Gradient.jpg");}
+.fillW, .fill {width:100%;}
+.fill{height:100%;}
+.bold{font-weight:bold;}
+.alR{text-align:right;}
+.hidden{visibility:hidden;}
+.visible{visibility:visible;}
+.inline{display:inline-block;}
+.padded{padding:.5em;}
+.rPadding{padding-right:.25em;}
+.maxW{max-width:35em;}
+.clear{background-color:transparent !important;}
+.center{text-align:center; align:center;}
+.backlit, .backlighting{background-image:url("http://fc04.deviantart.net/images3/i/2004/086/b/1/The_Gradient.jpg");}
+
+.backlighting{
+	text-align:right;
+	padding:.5em;
+	position:fixed;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0%;
+	min-width:20em;
+	z-index:-1;
+}
+
+.hoverR{
+    display:block;
+    right:0px;
+    z-index:2;
+}
+
+.backlighting #clock{
+	position:relative;
+	color:blue;
+}
+
+.content{
+	text-align:center;
+	padding:1em;
+	min-width:17em;
+}
+
+.content .shed, .content .sheds{
+    text-align:justify;
+}
+
+.backlighting,.content{
+	margin-left:11em;
+	#margin-right:11em;
+}
+
+.error{
+    display:none;
+	color:red;
+	padding:20px;
+	border:solid red 2px;
+	margin-bottom:20px;
+}
+
+.error li{
+    display:none;
+}
+
+.nav{
+    text-align:center;
+	position:fixed;
+	left:.4em;
+	top:.4em;
+	bottom:.4em;
+	width:10.2em;
+}
+
+.notifications{
+    /*position:fixed;
+    right:.6em;
+    top:.4em;
+    bottom:.4em;
+    width:10em;*/
+}
+
+.notifications .read, .notifications .unread{
+    width:61px;
+    height:29px;
+    background-size:100%;
+    padding:0px;
+    border:0px;
+}
+
+.notifications .read{
+    background-image:url("../PicStatic/mail-read.png");
+}
+
+.notifications .unread{
+    background-image:url("../PicStatic/mail-unread.png");
+}
+
+.notifications .expanded{display:none;}
+.notifications .contracted{display:block;}
+
+.nav .button{
+	margin-bottom:.5em;
+}
+
+.shed, .sheds, .tool, .shed .bold, .tool .bold, .sheds .bold, .shed table{
+    #color:white;
+    text-align:left;
+    font-weight:bold;
+}
+
+.shed, .sheds, .tool{
+    display:block;
+}
+.shed, .tool{
+	margin:.25em;
+    border:solid black 1px;
+}
+.shed{
+	border: solid black 2px;
+	padding:.25em;
+	background-color:#5883eb;
+}
+.tool{
+    display:block;
+    border:solid black 2px;
+	background-color:#89a0ff;
+	padding-left:1em;
+}
+.tool select{
+    min-width:15em;
+}
+
+.nopad, .nopad *, .nopad * *{
+	padding:0px;
+	margin:0px;
+}
+
+.minW{
+	min-width:300px;
+}
+
+.stretch{
+	width:99%;
+}
+.shrink{
+	white-space:nowrap;
+}
+
+#zipGuest{
+    position:absolute;
+    bottom:0px;
+    padding-right:1em;
+    #height:99%;
+}
+
+.cellSpaced td{
+	padding:10px;
+}
+
+.bar td, .bar tr, .bar .button, .button{
+	vertical-align:middle;
+}
+
+.fixed, .bar{
+	table-layout:fixed;
+}
+
+.bar{
+	margin:0px;
+	padding:0px;
+}
+
+.bordered, .bar{
+	border-spacing:0px;
+	border:solid black 2px;
+}
+
+.button, .button:hover, .button:active, .button:visited{
+    padding-left:1em;
+    padding-right:1em;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+
+    border:solid black 2px;
+	line-height:35px;
+	overflow:hidden;
+	text-align:center;
+	font-weight:bold;
+	height:35px;
+	display:inline-block;
+	background-repeat:repeat-x;
+	background-image:url('../PicStatic/button.png');
+	color:black;
+	cursor:default;
+	text-decoration:none;
+}
+
+.button:active{
+	background-image:url('../PicStatic/buttonPress.png');
+}
+
+.buttonPlain, .buttonPlain:hover, .buttonPlain:active, .buttonPlain:visited{
+	padding:.25em;
+	display:inline-block;
+	color:black;
+	cursor:default;
+	text-decoration:none;
+	border: solid black 2px;
+}
+
+.hilite, .hilite:hover, .hilite:active, .hilite:visited{
+    color:white;
+    background-image:url('../PicStatic/buttonHilite.png');
+}
+
+.hilite:active{
+    color:white;
+    background-image:url('../PicStatic/buttonPressHilite.png');
+}
+
+.right11{
+	padding-right:11px;
+}
+select, input, textarea{
+	padding:3px;
+	border:solid black 2px;
+}
+.multiline{
+	word-wrap:break-word;
+	height:3em;
+}
+h2{
+	text-align:center;
+}
+
+.popup{
+    display:none;
+}
+
+.profile, .profileDefault{
+    width:100px;
+    height:100px;
+    background-size:100%;
+    background-image:url('../PicStatic/Profiles/Default/default.png');
+    border:solid black 2px;
+}
+
+.profile{
+    border:0px;
+}
+
+hr{
+    color:black;
+    background-color:black;
+    border:0px;
+    height:2px;
+}
+
+input{
+    color:black !important;
+}
+/*.deferred{display:none;}*/

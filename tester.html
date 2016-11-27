@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reading is Fun</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div style="text-align:center;">
+		<ul>
+			<div class='wrapper'>
+				<form id='nameForm'>
+					<div class='form-uname'>
+						<label id='nameLabel' for='nameField'>Create a username:</label>
+						<input id='nameField' type='text' maxlength='25'></input>
+					</div>
+					<div class='form-sub'>
+						<button id='subButton' type='button'>Send your name!</button>
+					</div>
+					<div class='form-sub'>
+						<button id='getButton' type='button'>Get your name!</button>
+					</div>
+				</form>
+
+				<div>
+					<p id='result'></p>
+				</div>
+			</div>
+		</ul>
+<script type="text/javascript">
+function getUserName() {
+	var nameField = document.getElementById('nameField').value;
+	var result = document.getElementById('result');
+
+	if (nameField.length < 3) {
+		result.textContent = 'Username must contain at least 3 characters';
+    //alert('Username must contain at least 3 characters');
+} else {
+	alert("saving to storage");
+	localStorage['namethingy'] = [nameField, 'asdasda',5];
+	alert("saved.");
+}
+}
+function retrieveUserName() {
+	var result = document.getElementById('result');
+	var nameField = localStorage['c1'];
+	if (nameField.length < 3) {
+		result.textContent = 'Username must contain at least 3 characters';
+    //alert('Username must contain at least 3 characters');
+} else {
+	result.textContent =  nameField;
+	alert(nameField);
+}
+}
+var subButton = document.getElementById('subButton');
+subButton.addEventListener('click', getUserName, false); 
+var getButton = document.getElementById('getButton');
+getButton.addEventListener('click', retrieveUserName, false); 
+
+</script>
+
+	</div>
+</body>
+</html>

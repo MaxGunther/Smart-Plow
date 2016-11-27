@@ -1,46 +1,83 @@
 <!doctype html>
 <html>
 <head>
-<title>Registration</title>
-
+	<title>Registration</title>
 </head>
 <body background="http://fc04.deviantart.net/images3/i/2004/086/b/1/The_Gradient.jpg">
 	<div style="text-align:center;">
-
 <div class="content">
 	<h2>Register</h2>
-		
-				
-		<form action="register.html" method="POST" id="email">
+		<a href="login.html">Login</a>||<a href="your_route.html">See your route</a>||<a href="enter_route.html">Add Customers</a>||<a href="map.html">Map Page</a>
+
+		<form id="register">
 			<table class="maxW"><tr>
                 <td class="alR shrink"></td>
                 <td class="stretch">Please enter your information to sign up for our site</td>
             </tr><tr>
 				<td class="alR shrink bold">Name:</td>
-				<td class="stretch right11"><input type="text" class="fillW" name="Name" id="name"></td>
+				<td class="stretch right11">
+					<input type="text" class="fillW" id="nameField" for="nameField"></input>
+				</td>
 			</tr><tr>
 				<td class="alR shrink bold">Email:</td>
-				<td class="stretch right11"><input type="text" class="fillW" name="email" id="email"></td>
+				<td class="stretch right11">
+					<input type="text" class="fillW" for='email' id="email"></input>
+				</td>
 			</tr><tr>
 				<td class="alR shrink bold">Phone:</td>
-				<td class="stretch right11"><input type="text" class="fillW" name="phone" id="phone"></td>
+				<td class="stretch right11">
+					<input type="text" class="fillW" for="phone" id="phone"></input>
+				</td>
 			</tr><tr>
 				<td class="alR shrink bold">Password:</td>
-				<td class="stretch right11"><input type="password" class="fillW" name="password" id="pass"></td>
+				<td class="stretch right11"><input type="password" class="fillW" for="password" id="pass"></td>
 			</tr><tr>
-				<td class="shrink"></td>
-				
-				<td class="stretch">
-					<table class="fillW fixed" cellspacing=10>
-						<tr>
-						<td><button class="button" href="javascript:{}" onClick="submitLogin()">Register</a></td>
-						<td><button class="button" href="home">Go back</a></td>
-						</tr>
-					</table>
-				</td>
-			</tr></table>
+				<td class="alR shrink bold">Re-enter Password:</td>
+				<td class="stretch right11"><input type="password" class="fillW" for="password" id="pass2"></td>
+			</tr>				
+				</table>
 		</form>
-</div>
+				<button id="regButton" class="button">Register</button>
+				<button id="dispButton" class="button">Display Stuff</button>
+		<p id='result'></p>
 	</div>
+</div>
+<script type="text/javascript">
+function getUserName() {
+var nameField = document.getElementById('nameField').value;
+var email = document.getElementById('email').value;
+var phone = document.getElementById('phone').value;
+var passone = document.getElementById('pass').value;
+var passtwo = document.getElementById('pass2').value;
+var result = document.getElementById('result');
+
+if (nameField.length < 3) {
+    result.textContent = 'Username must contain at least 3 characters';
+    alert('Username must contain at least 3 characters');
+} else if (email.indexOf("@") == -1) {
+    result.textContent = 'Email requires an @ sign';
+    alert('Your Email looks funky');
+} else if (passone != passtwo) {
+    result.textContent = 'passwords must match';
+    alert('Your passwords do not match');
+} else {
+    result.textContent = 'Your username is: ' + nameField;
+	var alldata = [nameField,email,phone,passone];
+	localStorage['c1']= alldata;
+}
+}
+function fetchData() {
+	var alldata = localStorage['c1'];
+	var result = document.getElementById('result');
+	alert("test begining");
+	result.textContent = alldata;
+}
+var regButton = document.getElementById('regButton');
+regButton.addEventListener('click', getUserName, false); 
+
+var dispButton = document.getElementById('dispButton');
+dispButton.addEventListener('click', fetchData, false); 
+</script>
+
 </body>
 </html>

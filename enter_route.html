@@ -2,13 +2,15 @@
 <html>
 <head>
 <title>Enter Routes</title>
-
+	<script src="customer.js"> </script>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body background="http://fc04.deviantart.net/images3/i/2004/086/b/1/The_Gradient.jpg">
+<body>
 	<div style="text-align:center;">
 
 <div class="content">
 	<h2>Enter Routes</h2>
+	<a href="login.html">Login</a>||<a href="your_route.html">See your route</a>||<a href="enter_route.html">Add Customers</a>||<a href="map.html">Map Page</a>
 		
 		<!-- <div id="error" class="error">
             One or more errors occurred with your login attempt.
@@ -19,7 +21,7 @@
         </div> -->
 		
 		
-		<form action="enter_route.html" method="POST" id="email">
+		<div id="form">
 			<table class="maxW"><tr>
                 <td class="alR shrink"></td>
                 <td class="stretch">Please enter your customers information</td>
@@ -31,7 +33,10 @@
 				<td class="stretch right11"><input type="text" class="fillW" name="address" id="address"></td>
 			</tr><tr>
 				<td class="alR shrink bold">City:</td>
-				<td class="stretch right11"><input type="text" class="fillW" name="city" id="address"></td>
+				<td class="stretch right11"><input type="text" class="fillW" name="city" id="city"></td>
+			</tr><tr>
+				<td class="alR shrink bold">Zip Code:</td>
+				<td class="stretch right11"><input type="text" class="fillW" name="zip" id="zip"></td>
 			</tr><tr>
 				<td class="alR shrink bold">Phone:</td>
 				<td class="stretch right11"><input type="text" class="fillW" name="phone" id="phone"></td>
@@ -39,19 +44,23 @@
 				<td class="alR shrink bold">Email:</td>
 				<td class="stretch right11"><input type="text" class="fillW" name="email" id="email"></td>
 			</tr><tr>
+				<td class="alR shrink bold">Contact:</td>
+				<td class="stretch right11"><input type="text" class="fillW" name="contact" id="bool"></td>
+			</tr><tr>
 				<td class="shrink"></td>
 				
 				<td class="stretch">
 					<table class="fillW fixed" cellspacing=10>
 						<tr>
-						<td><button class="button" href="javascript:{}" onClick="submitLogin()">Verify</a></td>
+						<td><button class="button" href="javascript:{}" onClick="Verify()">Verify</a></td>
 						<td><button class="button" href="home">Go back</a></td>
 						</tr>
 					</table>
 				</td>
 			</tr></table>
-		</form>
-</div>
+		</div>
+		<table id="CustomerTable"></table>
 	</div>
+</div>
 </body>
 </html>

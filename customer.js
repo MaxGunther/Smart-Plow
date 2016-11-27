@@ -1,8 +1,52 @@
 
 // Create an array to store the customers
-var customers = [];
-alert("Made an empty array");
+function GiveMeTheWorks() {
+  var customers = [];
+  alert("Made an empty array");
 
+  alert("Created object customer");
+
+  // Test adding new customers to customers list
+  var customer1 = new customer('me', '26 Brent Road', "Lexington", '02420', '781-555-1212', 'a@b.com', false);
+  customers.push(customer1);
+  var customer2 = new customer('you', '62 Brent Road', "Lexington", '02420', '781-555-1212', 'a@b.com', false);
+  customers.push(customer2);
+  // See if the push worked.
+  alert("List has " + customers.length + " customers");
+  //listCustomers();
+  // Test data of an array of arrays
+  var data = [
+  ["Angelo Michelangelo", "116 Hamilton Street", "Rochester", "14620", "585-555-1212", 0, 1],
+  ["Kevin da Vinci", "47 Alexander Street", "Rochester", "14620", "585-555-1212", 0, 0],
+  ["Gabriel Raphael","22 Cayuga Street","Rochester","14620","585-555-1212",0,0],
+  ["Sandra Botticelli","20 Bloomfield Place","Rochester","14620","585-555-1212",0,1],
+  ["Titus Titian","169 Sanford St","Rochester","14620","585-555-1212",0,1],
+  ["Donald Donatello","82 Cypress Street","Rochester","14620","585-555-1212",0,0],
+  ["Maura Masaccio","35 Parkwood Avenue","Rochester","14620","585-555-1212",0,1],
+  ["Phil Brunelleschi","97 Danbury Circle North","Rochester, NY","14618","585-555-1212",0,0],
+  ["Gina Giotto","248 Barclay Square Drive","Rochester","14618","585-555-1212",0,1],
+  ["George Vasari","96 Schilling Lane","Rochester","14618","585-555-1212",0,0],
+  ["Lauren Ghiberti","67 Furman Crescent","Rochester","14620","585-555-1212",0,1],
+  ["Jim Giorgione","86 Southview Terrace","Rochester","14620","585-555-1212",0,0],
+  ["Frances Angelico","551 Southwood Drive","Rochester","14620","585-555-1212",0,0],
+  ["Vanessa  Bellini","585 Bending Bough Drive","Webster","14580","585-555-1212",0,1],
+  ["Paul Uccello","671 Shadow Wood Lane","Webster","14580","585-555-1212",0,0],
+  ["Phyllis Lippo","1115 Shoemaker Road","Webster","14580","585-555-1212",0,0],
+  ["Don Bramatte","1197 Appian Drive","Webster","14580","585-555-1212",0,1],
+  ["Paula Veronesa","1127 Wall Road","Webster","14580","585-555-1212",0,0],
+  ["Caroline Caravaggio","939 Joylene Drive","Webster","14580","585-555-1212",0,1],
+  ["Andrea del Sarto","951 Copper Kettle Road","Webster","14580","585-555-1212",0,1],
+  ["Sonny Anguissola","698 Shanlee Drive","Webster","14580","585-555-1212",0,0],
+  ["Tony del Pollaiuolo","612 Shady Glen Circle","Webster","14580","585-555-1212",0,1],
+  ["Reggie Correggio","459 Heathland Circle","Webster","14580","585-555-1212",0,0],
+  ["Ben Gozzoli","520 Robindale Drive","Webster","14580","585-555-1212",0,1]
+  ];
+  CustomersfromLines(data);
+
+  // See if it worked
+  alert("List has " + customers.length + " customers");
+  //listCustomers();
+}
 // Create a customer object
 function customer(name, address, city, zipcode, phone, email, contact) {
   this.name = name;
@@ -17,13 +61,6 @@ function customer(name, address, city, zipcode, phone, email, contact) {
     alert("Customer lives at " + address + ", " + city + ", " + zipcode);
   };
 }
-alert("Created object customer");
-
-// Test adding new customers to customers list
-var customer1 = new customer('me', '26 Brent Road', "Lexington", '02420', '781-555-1212', 'a@b.com', false);
-customers.push(customer1);
-var customer2 = new customer('you', '62 Brent Road', "Lexington", '02420', '781-555-1212', 'a@b.com', false);
-customers.push(customer2);
 
 // Step through the list of customers and display info on each.
 function listCustomers() {
@@ -31,9 +68,7 @@ function listCustomers() {
     customers[i].getaddress();
   }
 }
-// See if the push worked.
-alert("List has " + customers.length + " customers");
-//listCustomers();
+
 
 // From an array of properties, create a customer
 function makeCustomer(arr) {
@@ -47,18 +82,6 @@ function CustomersfromLines(lines) {
     customers.push(cust);
   }
 }
-
-// Test data of an array of arrays
-var data = [
-  ["Angelo Michelangelo", "116 Hamilton Street", "Rochester", "14620", "585-555-1212", 0, 1],
-  ["Kevin da Vinci", "47 Alexander Street", "Rochester", "14620", "585-555-1212", 0, 0]
-]
-
-CustomersfromLines(data);
-
-// See if it worked
-alert("List has " + customers.length + " customers");
-//listCustomers();
 
 
 function CustomersToTable() {
@@ -85,4 +108,10 @@ function CustomersToTable() {
   }
 
   document.getElementById("CustomerTable").innerHTML = table;
+}
+function Verify() {
+//  var input = document.getElementsByTagName("form");
+  var c = customer(document.getElementById("name"), document.getElementById("address"), document.getElementById("city"), document.getElementById("zipcode"), document.getElementById("phone"), document.getElementById("email"), document.getElementById("bool"));
+  customers.push(c);
+  alert("I did a thing!");
 }
