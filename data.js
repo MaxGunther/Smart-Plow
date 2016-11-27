@@ -1,0 +1,42 @@
+ var customerData = [
+ ["Angelo Michelangelo", "116 Hamilton Street", "Rochester", "14620", "585-555-1212", "angelo@coldmail.com", 1],
+ ["Kevin da Vinci", "47 Alexander Street", "Rochester", "14620", "585-555-1212", "davinci@coldmail.com", 0],
+ ["Gabriel Raphael","22 Cayuga Street","Rochester","14620","585-555-1212","rafe@coldmail.com",0],
+ ["Sandra Botticelli","20 Bloomfield Place","Rochester","14620","585-555-1212","sandybot@coldmail.com",1],
+ ["Titus Titian","169 Sanford St","Rochester","14620","585-555-1212","titian@yippee.com",1],
+ ["Donald Donatello","82 Cypress Street","Rochester","14620","585-555-1212","donny@yippee.com",0],
+ ["Maura Masaccio","35 Parkwood Avenue","Rochester","14620","585-555-1212","mauramas@coldmail.com",1],
+ ["Phil Brunelleschi","97 Danbury Circle North","Rochester","14618","585-555-1212","bruno@coldmail.com",0],
+ ["Gina Giotto","248 Barclay Square Drive","Rochester","14618","585-555-1212","ginagio@yippee.com",1],
+ ["George Vasari","96 Schilling Lane","Rochester","14618","585-555-1212","geo@vasari.com",0],
+ ["Lauren Ghiberti","67 Furman Crescent","Rochester","14620","585-555-1212","bertie@ghiberti.com",1],
+ ["Jim Giorgione","86 Southview Terrace","Rochester","14620","585-555-1212","jim@giorgione.com",0],
+ ["Frances Angelico","551 Southwood Drive","Rochester","14620","585-555-1212","angel@coldmail.com",0],
+ ["Vanessa  Bellini","585 Bending Bough Drive","Webster","14580","585-555-1212","vanbel@yippee.com",1],
+ ["Paul Uccello","671 Shadow Wood Lane","Webster","14580","585-555-1212","paulucc@yippee.com",0],
+ ["Phyllis Lippo","1115 Shoemaker Road","Webster","14580","585-555-1212","lippo89@yippee.com",0],
+ ["Don Bramatte","1197 Appian Drive","Webster","14580","585-555-1212","don.bramatte@coldmail.com",1],
+ ["Paula Veronesa","1127 Wall Road","Webster","14580","585-555-1212","pveronesa@yippee.com",0],
+ ["Caroline Caravaggio","939 Joylene Drive","Webster","14580","585-555-1212","carrie.cara@yippee.com",1],
+ ["Andrea del Sarto","951 Copper Kettle Road","Webster","14580","585-555-1212","delsarto@coldmail.com",1],
+ ["Sonny Anguissola","698 Shanlee Drive","Webster","14580","585-555-1212","anguiss@coldmail.com",0],
+ ["Tony del Pollaiuolo","612 Shady Glen Circle","Webster","14580","585-555-1212","tonydelp@yippee.com",1],
+ ["Reggie Correggio","459 Heathland Circle","Webster","14580","585-555-1212","reggio@popmail.com",0],
+ ["Ben Gozzoli","520 Robindale Drive","Webster","14580","585-555-1212","gozzo@coldmail.com",1]
+ ];
+ var driverData = [
+ ["Abby Adams","585-555-6666","abby@adams.com","email"],
+ ["Alan Ethan", "585-555-1421","alethan@greenplows.com","phone"],
+ ["Nathaniel Greene", "585-555-0123", "natgreen@myplow.com", "email"],
+ ["Natalie Hale", "585-555-1666","natalie@hale.com","phone"],
+ ["Alex Hamilton", "585-555-1776", "hamilton@plowsrus.com", "email"],
+ ["Tom Jefferson", "585-555-5555","tjefferson@yippee.com","phone"],
+ ["Jack Adams", "585-555-1462", "john.adams@winterplow.com", "email"],
+ ["Arnold Benedict", "585-555-0009", "arben@coldmail.com", "email"],
+ ["Jay Hancock", "585-555-1111","jhancock@popmail.com","phone"],
+ ["John Jaycob", "585-555-6767", "jaycob@yahooo.com", "email"],
+ ["Hank Knox", "585-555-9876", "knoxh@plowsinc.com", "email"].
+ ["Samantha Adams", "585-555-1681","samadams@adams.com","phone"],
+ ["Frank Benjamin","585-555-7771","frankb@landscapes.com","email"],
+ ["Patricia Henry", "585-555-4242", "henry.trish@henrylandscaping.com", "phone"]
+ ];
