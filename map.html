@@ -3,7 +3,12 @@
   <head>
       <title>Route Map</title>
       <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="map.js"></script>
+      <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARYT_qaRSzCK-E-dqwQVrKErX-JO0EwaA&callback=initMap">
+    </script>
+      <script src="dataset.js"></script>
+      <script src="loadlist.js"></script>
+      
   </head>
   <body>
     <div style="text-align:center;">
@@ -11,9 +16,8 @@
     <ul  id = "banner"><a class='button' href="login.html">Login</a>||<a class='button' href="your_route.html">See your route</a>||<a class='button' href="enter_route.html">Add Customers</a>||<a class='button' href="map.html">Map Page</a></ul>
     <div id="map"></div>
     
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARYT_qaRSzCK-E-dqwQVrKErX-JO0EwaA&callback=initMap">
-    </script>
+    <script src="map.js"></script>
+    <button onclick="swapCustomerArea()">Switch Customer Area</button>
   </div>
   </body>
 </html>
