@@ -23,6 +23,7 @@ function customer(name, address, city, zipcode, phone, email, contact, latitude,
   this.contact = contact;
   this.latitude = latitude;
   this.longitude = longitude;
+  this.marker = null;
   // create an easy way to display info for debugging
   this.getaddress = function getaddress() {
     alert("Customer lives at " + address + ", " + city + ", " + zipcode);

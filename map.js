@@ -7,14 +7,6 @@ CustomersfromLines(WebsterCustomers, WebsterCustomerList);
 
 var customersToDisplay = RochesterCustomerList;
 
-function swapCustomerArea () {
-  if (customersToDisplay === RochesterCustomerList) {
-    customersToDisplay = WebsterCustomerList;
-  } else {
-    customersToDisplay = RochesterCustomerList;
-  }
-  initMap();
-}
 
 function findLatitude (object) {
   if (object instanceof customer) {
@@ -50,7 +42,63 @@ function centerPoint(points) {
   return ([sumlat/count, sumlng/count]);
 }
 
+//If you don't give a marker a map to draw on, it just hangs around until you display it.
+function makeMarkers(customerList) {
+  var markerList = [];
+  for (var i = 0; i < customerList.length; i++) {
+    var lat = findLatitude(customerList[i]);
+    var lng = findLongitude(customerList[i]);
+    var point = {lat: lat, lng: lng};
+    var marker = new google.maps.Marker({
+          position: point,
+          title: customerList[i].address
+      });
+    markerList.push(marker);
+  }
+  return markerList;
+}
 
+var RochesterCustomerMarkers = makeMarkers(RochesterCustomerList);
+var WebsterCustomerMarkers = makeMarkers(WebsterCustomerList);
+
+
+//Display the list of markers on a map
+function displayMarkersOnMap(markerlist, map) {
+  for (var i = 0; i < markerlist.length; i++) {
+    markerlist[i].setMap(map);
+  }
+}
+
+//Remove the list of markers from a map
+function removeMarkersFromMap(markerlist, map) {
+ for (var i = 0; i < markerlist.length; i++) {
+    markerlist[i].setMap(null);
+  }
+}
+
+function swapCustomerArea () {
+  if (customersToDisplay === RochesterCustomerList) {
+    customersToDisplay = WebsterCustomerList;
+  } else {
+    customersToDisplay = RochesterCustomerList;
+  }
+  initMap();
+}
+
+/*
+function swapCustomerArea () {
+  if (customersToDisplay === RochesterCustomerList) {
+    customersToDisplay = WebsterCustomerList;
+    removeMarkersFromMap(RochesterCustomerMarkers);
+    displayMarkersOnMap(WebsterCustomerMarkers);
+  } else {
+    customersToDisplay = RochesterCustomerList;
+    removeMarkersFromMap(WebsterCustomerMarkers);
+    displayMarkersOnMap(RochesterCustomerMarkers);
+  }
+  //initMap();
+}
+*/
 
 function initMap() {
   var customerList = customersToDisplay;
@@ -59,6 +107,7 @@ function initMap() {
     zoom: 12,
     center: {lat: centerPt[0], lng: centerPt[1]}
   });
+  /*
   for (var i = 0; i < customerList.length; i++) {
     var lat = findLatitude(customerList[i]);
     var lng = findLongitude(customerList[i]);
@@ -68,5 +117,12 @@ function initMap() {
       map: map,
       title: customerList[i].address
     });
-  }}
+  }
+  */
+  var markers = makeMarkers(customersToDisplay);
+  displayMarkersOnMap(markers, map);
+}
 
+function addMarkstoMap() {
+  displayMarkersOnMap(customersToDisplay);
+}

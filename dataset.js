@@ -7,7 +7,7 @@
  ["Maura Masaccio","35 Parkwood Avenue","Rochester","14620","585-555-1212","mauramas@coldmail.com",1,43.131657,-77.586848],
  ["Gina Giotto","248 Barclay Square Drive","Rochester","14618","585-555-1212","ginagio@yippee.com",1,43.115878,-77.586816],
  ["Jim Giorgione","86 Southview Terrace","Rochester","14620","585-555-1212","jim@giorgione.com",0,43.121153,-77.6100905999999],
- 
+ ["Paula Veronesa","1127 Wall Road","Webster","14580","585-555-1212","pveronesa@yippee.com",0, 43.1230509,-77.615793],
  ["George Vasari","96 Schilling Lane","Rochester","14618","585-555-1212","geo@vasari.com",0, 43.129732,-77.6128999999999],
  ["Lauren Ghiberti","67 Furman Crescent","Rochester","14620","585-555-1212","bertie@ghiberti.com",1,43.116511,-77.5994539999999],
  ["Phil Brunelleschi","97 Danbury Circle North","Rochester","14618","585-555-1212","bruno@coldmail.com",0,43.119265,-77.572292],
@@ -16,7 +16,6 @@
  var WebsterCustomers = [
  ["Don Bramatte","1197 Appian Drive","Webster","14580","585-555-1212","don.bramatte@coldmail.com",1, 43.229678,-77.4553508999999],
  ["Frances Angelico","551 Southwood Drive","Webster","14580","585-555-1212","angel@coldmail.com",0,43.228579,-77.4523699999999],
- ["Paula Veronesa","1127 Wall Road","Webster","14580","585-555-1212","pveronesa@yippee.com",0, 43.1230509,-77.615793],
  ["Caroline Caravaggio","939 Joylene Drive","Webster","14580","585-555-1212","carrie.cara@yippee.com",1, 43.2349307,-77.4445251999999],
  ["Andrea del Sarto","951 Copper Kettle Road","Webster","14580","585-555-1212","delsarto@coldmail.com",1, 43.238601,-77.4476439999999],
  ["Sonny Anguissola","698 Shanlee Drive","Webster","14580","585-555-1212","anguiss@coldmail.com",0,43.2351035,-77.4552957999999],
