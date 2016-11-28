@@ -40,3 +40,20 @@
  ["Frank Benjamin","585-555-7771","frankb@landscapes.com","email"],
  ["Patricia Henry", "585-555-4242", "henry.trish@henrylandscaping.com", "phone"]
  ];
+var moreCustomers = [
+["Annette Pisanello","902 Copper Kettle Road","Webster","14580","585-555-1212","annette@pisanello","0"],
+["Vanna Bazzi","692 Shanlee Drive","Webster","14580","585-555-1212","vanbazzi@yippee.com","1"],
+["Marian Albertinelli","599 Shady Glen Circle","Webster","14580","585-555-1212","marian@albertinelli.com","1"],
+["Victor Cellini","401 Heathland Circle","Webster","14580","585-555-1212","cellini@yippee.com","1"],
+["Cosmo Tura","518 Robindale Drive","Webster","14580","585-555-1212","cosmo.tura@yippee.com","1"],
+["Carla Crivelli","125 Hamilton Street","Rochester","14620","585-555-1212","crivelli@yippee.com","1"],
+["Michael Michelozzo","51 Alexander Street","Rochester","14620","585-555-1212","michelozzo@yippee.com","1"],
+["Bart Bandinelli","18 Cayuga Street","Rochester","14620","585-555-1212","bandinelli@yippee.com","0"],
+["Lorenzo Lotto","24 Bloomfield Place","Rochester","14620","585-555-1212","loren@lotto.com","0"],
+["Sebastian Piombo","179 Sanford St","Rochester","14620","585-555-1212","bash@piombo.com","1"],
+["Bernadette Butinone","89 Cypress Street","Rochester","14620","585-555-1212","bernie123@yippee.com","0"],
+["Jake Quercia","39 Parkwood Avenue","Rochester","14620","585-555-1212","quercia@coldmail.com","1"],
+["Lea Clovio","93 Danbury Circle North","Rochester","14618","585-555-1212","lea.clovio@coldmail.com","0"],
+["Perry Baldassare","222 Barclay Square Drive","Rochester","14618","585-555-1212","baldassare.perry@yippee.com","0"],
+["Florence Lucco","87 Schilling Lane","Rochester","14618","585-555-1212","flo.lucco@yippee.com","1"]
+];
